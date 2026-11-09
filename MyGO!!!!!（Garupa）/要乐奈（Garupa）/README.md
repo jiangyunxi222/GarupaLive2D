@@ -1,0 +1,28 @@
+# 要乐奈（Garupa） (Garupa)
+
+在 Live2DViewerEX 中导入 `00_integrated.model.json`。完整复制此角色目录。
+
+整合入口使用固定透明父模型，原有衣装菜单、动作、表情、语音及点击区域保留。
+模型 ID 按游戏区分；换装沿用父模型的位置、缩放、旋转和镜像，重复选择当前衣装不重载。
+衣装加载时隐藏 150 毫秒后恢复贴图，可能短暂空白；播放器画面效果尚待实测。
+
+| 编号 | 衣装 | 入口 |
+|---:|---|---|
+| 001 | 默认·舞台 | `001_costume.model.json` |
+| 002 | 常服·2023 | `002_costume.model.json` |
+| 003 | 校服·夏季2023 | `003_costume.model.json` |
+| 004 | 校服·冬季2023 | `004_costume.model.json` |
+| 005 | 演出服·随心所欲（SR） | `005_costume.model.json` |
+| 006 | 演出服·投币式停车场的猫（UR） | `006_costume.model.json` |
+| 007 | 演出服·好闲。（SR） | `007_costume.model.json` |
+| 008 | 演出服·某一天的和式走廊（UR） | `008_costume.model.json` |
+| 009 | 演出服·活动287（SSR） | `009_costume.model.json` |
+| 010 | 演出服·猫咪今日如常（SR） | `010_costume.model.json` |
+| 011 | 演出服·与随性的流浪猫一起（UR） | `011_costume.model.json` |
+| 012 | 演出服·拨弄琴弦的猫 | `012_costume.model.json` |
+| 013 | 活动·梦想祭·在飘雪中踏上归途（UR） | `013_costume.model.json` |
+| 014 | 剧情·活动286剧情01 | `014_costume.model.json` |
+| 015 | 生日·Hopeful birthday！（SSR） | `015_costume.model.json` |
+| 016 | 联动·此刻的前方（UR） | `016_costume.model.json` |
+
+素材权利归原权利人，不含播放器及编辑器源工程。

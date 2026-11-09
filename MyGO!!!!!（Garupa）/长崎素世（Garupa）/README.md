@@ -1,0 +1,27 @@
+# 长崎素世（Garupa） (Garupa)
+
+在 Live2DViewerEX 中导入 `00_integrated.model.json`。完整复制此角色目录。
+
+整合入口使用固定透明父模型，原有衣装菜单、动作、表情、语音及点击区域保留。
+模型 ID 按游戏区分；换装沿用父模型的位置、缩放、旋转和镜像，重复选择当前衣装不重载。
+衣装加载时隐藏 150 毫秒后恢复贴图，可能短暂空白；播放器画面效果尚待实测。
+
+| 编号 | 衣装 | 入口 |
+|---:|---|---|
+| 001 | 默认·舞台 | `001_costume.model.json` |
+| 002 | 常服·2023 | `002_costume.model.json` |
+| 003 | 校服·夏季2023 | `003_costume.model.json` |
+| 004 | 校服·冬季2023 | `004_costume.model.json` |
+| 005 | 演出服·我来结束这一切（UR） | `005_costume.model.json` |
+| 006 | 演出服·放松力气（R） | `006_costume.model.json` |
+| 007 | 演出服·雨一直下（UR） | `007_costume.model.json` |
+| 008 | 演出服·我们用我们的方法（SSR） | `008_costume.model.json` |
+| 009 | 演出服·开幕前的片刻（UR） | `009_costume.model.json` |
+| 010 | 演出服·只是过于耀眼（UR） | `010_costume.model.json` |
+| 011 | 演出服·崭新的萌芽（SR） | `011_costume.model.json` |
+| 012 | 演出服·冷静的调停者 | `012_costume.model.json` |
+| 013 | 活动·梦想祭·这种关系的名字是（UR） | `013_costume.model.json` |
+| 014 | 生日·HopefulBirthday!（SSR） | `014_costume.model.json` |
+| 015 | 联动·时间长河的尽头（UR） | `015_costume.model.json` |
+
+素材权利归原权利人，不含播放器及编辑器源工程。
