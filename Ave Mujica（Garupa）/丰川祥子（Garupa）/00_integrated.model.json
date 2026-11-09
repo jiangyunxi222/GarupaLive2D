@@ -1,0 +1,831 @@
+{
+  "version": "Sample 1.0.0",
+  "conf_ver": 0,
+  "type": 0,
+  "bounds": {
+    "width": 2.592,
+    "height": 4.7628,
+    "center_x": 0.0,
+    "center_y": 0.4374
+  },
+  "model": "assets/models/f354c7dbd8fd29aadb697e3c366515a7.moc",
+  "textures": [
+    "assets/anchor/transparent.png",
+    "assets/anchor/transparent.png"
+  ],
+  "controllers": {
+    "param_hit": {},
+    "param_loop": {},
+    "key_trigger": {
+      "items": [
+        {
+          "input": 1,
+          "down_mtn": "l2d_menu_down#5",
+          "up_mtn": "l2d_menu_up#5"
+        }
+      ],
+      "enabled": true
+    },
+    "param_trigger": {},
+    "area_trigger": {},
+    "hand_trigger": {},
+    "eye_blink": {
+      "min_interval": 500,
+      "max_interval": 6000,
+      "enabled": true
+    },
+    "lip_sync": {
+      "gain": 5.0
+    },
+    "mouse_tracking": {
+      "smooth_time": 0.15,
+      "enabled": true
+    },
+    "auto_breath": {
+      "enabled": true
+    },
+    "extra_motion": {
+      "enabled": true
+    },
+    "accelerometer": {
+      "enabled": true
+    },
+    "microphone": {},
+    "transform": {},
+    "face_tracking": {
+      "enabled": true
+    },
+    "hand_tracking": {},
+    "param_value": {},
+    "part_opacity": {},
+    "artmesh_opacity": {},
+    "artmesh_color": {},
+    "artmesh_culling": {
+      "default_mode": 0
+    },
+    "intimacy_system": {},
+    "battery": {}
+  },
+  "motions": {
+    "idle": [
+      {
+        "name": "idle",
+        "file": "assets/motions/0a91204905feaf57200c435441d36b20.mtn",
+        "interruptable": true
+      }
+    ],
+    "start": [
+      {
+        "name": "initialize_anchor",
+        "motion_duration": 1,
+        "priority": 9,
+        "next_mtn": "restore_costume",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "init 1"
+          }
+        ]
+      }
+    ],
+    "carrier_switch_000": [
+      {
+        "name": "switch",
+        "text": "换装中…",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 001_costume.model.json 1",
+        "text_duration": 1000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 1"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "carrier_switch_001": [
+      {
+        "name": "switch",
+        "text": "换装中…",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 002_costume.model.json 1",
+        "text_duration": 1000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 1"
+          },
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 2"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 2"
+          }
+        ]
+      }
+    ],
+    "carrier_switch_002": [
+      {
+        "name": "switch",
+        "text": "换装中…",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 003_costume.model.json 1",
+        "text_duration": 1000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 2"
+          },
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 3"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 3"
+          }
+        ]
+      }
+    ],
+    "carrier_switch_003": [
+      {
+        "name": "switch",
+        "text": "换装中…",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 004_costume.model.json 1",
+        "text_duration": 1000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 3"
+          },
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 4"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 4"
+          }
+        ]
+      }
+    ],
+    "carrier_switch_004": [
+      {
+        "name": "switch",
+        "text": "换装中…",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 005_costume.model.json 1",
+        "text_duration": 1000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 4"
+          },
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 5"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 5"
+          }
+        ]
+      }
+    ],
+    "carrier_random": [
+      {
+        "name": "random_000",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 001_costume.model.json 1",
+        "motion_duration": 200,
+        "priority": 2,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 1,
+            "code": "not_equal 0"
+          },
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 1"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      },
+      {
+        "name": "random_001",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 002_costume.model.json 1",
+        "motion_duration": 200,
+        "priority": 2,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 1,
+            "code": "not_equal 1"
+          },
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 1"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 2"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 2"
+          }
+        ]
+      },
+      {
+        "name": "random_002",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 003_costume.model.json 1",
+        "motion_duration": 200,
+        "priority": 2,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 1,
+            "code": "not_equal 2"
+          },
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 2"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 3"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 3"
+          }
+        ]
+      },
+      {
+        "name": "random_003",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 004_costume.model.json 1",
+        "motion_duration": 200,
+        "priority": 2,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 1,
+            "code": "not_equal 3"
+          },
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 3"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 4"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 4"
+          }
+        ]
+      },
+      {
+        "name": "random_004",
+        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;remove_submodel 003_costume.model.json;remove_submodel 004_costume.model.json;remove_submodel 005_costume.model.json;add_submodel 005_costume.model.json 1",
+        "motion_duration": 200,
+        "priority": 2,
+        "var_floats": [
+          {
+            "name": "l2d_carrier_active",
+            "type": 1,
+            "code": "not_equal 4"
+          },
+          {
+            "name": "l2d_carrier_active",
+            "type": 2,
+            "code": "assign 4"
+          },
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "not_equal 5"
+          },
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "assign 5"
+          }
+        ]
+      }
+    ],
+    "carrier_wardrobe_0_1": [
+      {
+        "name": "choose",
+        "text": "剧情",
+        "choices": [
+          {
+            "text": "丰川祥子（Garupa） · 剧情·活动297剧情01",
+            "next_mtn": "l2d_menu_sel_000#5"
+          },
+          {
+            "text": "返回分类",
+            "next_mtn": "l2d_menu_sel_001#5"
+          }
+        ],
+        "text_duration": 8000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "carrier_wardrobe_1_1": [
+      {
+        "name": "choose",
+        "text": "常服",
+        "choices": [
+          {
+            "text": "丰川祥子（Garupa） · 常服·2023",
+            "next_mtn": "l2d_menu_sel_002#5"
+          },
+          {
+            "text": "返回分类",
+            "next_mtn": "l2d_menu_sel_003#5"
+          }
+        ],
+        "text_duration": 8000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "carrier_wardrobe_2_1": [
+      {
+        "name": "choose",
+        "text": "校服",
+        "choices": [
+          {
+            "text": "丰川祥子（Garupa） · 校服·初中冬季2023",
+            "next_mtn": "l2d_menu_sel_004#5"
+          },
+          {
+            "text": "丰川祥子（Garupa） · 校服·夏季2023",
+            "next_mtn": "l2d_menu_sel_005#5"
+          },
+          {
+            "text": "丰川祥子（Garupa） · 校服·冬季2023",
+            "next_mtn": "l2d_menu_sel_006#5"
+          },
+          {
+            "text": "返回分类",
+            "next_mtn": "l2d_menu_sel_007#5"
+          }
+        ],
+        "text_duration": 8000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "carrier_wardrobe": [
+      {
+        "name": "categories",
+        "text": "衣装",
+        "choices": [
+          {
+            "text": "剧情（1）",
+            "next_mtn": "l2d_menu_sel_008#5"
+          },
+          {
+            "text": "常服（1）",
+            "next_mtn": "l2d_menu_sel_009#5"
+          },
+          {
+            "text": "校服（3）",
+            "next_mtn": "l2d_menu_sel_010#5"
+          }
+        ],
+        "text_duration": 8000,
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_000#5": [
+      {
+        "name": "menu_select_000",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_switch_004",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_001#5": [
+      {
+        "name": "menu_select_001",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_wardrobe",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_002#5": [
+      {
+        "name": "menu_select_002",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_switch_000",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_003#5": [
+      {
+        "name": "menu_select_003",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_wardrobe",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_004#5": [
+      {
+        "name": "menu_select_004",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_switch_001",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_005#5": [
+      {
+        "name": "menu_select_005",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_switch_002",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_006#5": [
+      {
+        "name": "menu_select_006",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_switch_003",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_007#5": [
+      {
+        "name": "menu_select_007",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_wardrobe",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_008#5": [
+      {
+        "name": "menu_select_008",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_wardrobe_0_1",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_009#5": [
+      {
+        "name": "menu_select_009",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_wardrobe_1_1",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_sel_010#5": [
+      {
+        "name": "menu_select_010",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "carrier_wardrobe_2_1",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_down#5": [
+      {
+        "name": "menu_down",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 2"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_up#5": [
+      {
+        "name": "menu_up",
+        "motion_duration": 260,
+        "priority": 2,
+        "interruptable": true,
+        "next_mtn": "l2d_menu_verify#5",
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 1,
+            "code": "equal 2"
+          }
+        ]
+      }
+    ],
+    "l2d_menu_verify#5": [
+      {
+        "name": "menu_verify",
+        "command": "hide_text",
+        "motion_duration": 200,
+        "priority": 2,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "l2d_menu_state",
+            "type": 1,
+            "code": "equal 2"
+          },
+          {
+            "name": "l2d_menu_state",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "restore_costume": [
+      {
+        "name": "restore_000",
+        "command": "add_submodel 001_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "restore_001",
+        "command": "add_submodel 002_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 2"
+          }
+        ]
+      },
+      {
+        "name": "restore_002",
+        "command": "add_submodel 003_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 3"
+          }
+        ]
+      },
+      {
+        "name": "restore_003",
+        "command": "add_submodel 004_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 4"
+          }
+        ]
+      },
+      {
+        "name": "restore_004",
+        "command": "add_submodel 005_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 5"
+          }
+        ]
+      }
+    ]
+  },
+  "physics_v2": {},
+  "options": {
+    "id": "garupa_l2d_carrier_sakiko",
+    "tex_fixed": true,
+    "tex_type": 0
+  }
+}
