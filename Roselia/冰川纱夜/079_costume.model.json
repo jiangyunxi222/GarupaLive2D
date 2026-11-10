@@ -790,10 +790,17 @@
         "priority": 9,
         "interruptable": false,
         "command": "stop_all_sounds; parameters unlock; parts unlock; animations unlock; clear_exp",
-        "post_command": "replace_tex 0 assets/textures/5d93c61e8573d2415ce69b4873ce4060.png; start_mtn ui_main#4",
+        "post_command": "replace_tex 0 assets/textures/5d93c61e8573d2415ce69b4873ce4060.png; start_mtn garupa_l2d_carrier_sayo carrier_finish_costume",
         "file": "assets/motions/4abf9cf3da2ca0e1ccebf65647f01e46.mtn",
         "file_loop": true,
-        "next_mtn": "idle"
+        "next_mtn": "idle",
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "init 1"
+          }
+        ]
       }
     ],
     "ui_close#4": [
@@ -802,7 +809,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "hide_text"
+        "command": "start_mtn garupa_l2d_carrier_sayo carrier_hide_text#5"
       }
     ],
     "ui_reset#4": [
@@ -3935,7 +3942,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "hide_text",
+        "command": "start_mtn garupa_l2d_carrier_sayo carrier_manual_wardrobe#5",
         "next_mtn": "ui_wardrobe_001#4"
       }
     ],
@@ -3945,8 +3952,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_000",
-        "next_mtn": "ui_voice_status_000#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_000#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
       }
     ],
     "ui_select_0136#4": [
@@ -3955,8 +3969,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_001",
-        "next_mtn": "ui_voice_status_001#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_001#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
       }
     ],
     "ui_select_0137#4": [
@@ -3965,8 +3986,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_002",
-        "next_mtn": "ui_voice_status_002#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_002#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 2"
+          }
+        ]
       }
     ],
     "ui_voice_list_001#4": [
@@ -4007,8 +4035,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_003",
-        "next_mtn": "ui_voice_status_003#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_003#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 3"
+          }
+        ]
       }
     ],
     "ui_select_0139#4": [
@@ -4017,8 +4052,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_004",
-        "next_mtn": "ui_voice_status_004#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_004#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 4"
+          }
+        ]
       }
     ],
     "ui_select_0140#4": [
@@ -4027,8 +4069,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_005",
-        "next_mtn": "ui_voice_status_005#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_005#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 5"
+          }
+        ]
       }
     ],
     "ui_voice_list_002#4": [
@@ -4073,8 +4122,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_006",
-        "next_mtn": "ui_voice_status_006#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_006#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 6"
+          }
+        ]
       }
     ],
     "ui_select_0142#4": [
@@ -4083,8 +4139,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_007",
-        "next_mtn": "ui_voice_status_007#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_007#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 7"
+          }
+        ]
       }
     ],
     "ui_select_0143#4": [
@@ -4093,8 +4156,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_008",
-        "next_mtn": "ui_voice_status_008#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_008#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 8"
+          }
+        ]
       }
     ],
     "ui_voice_list_003#4": [
@@ -4139,8 +4209,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_009",
-        "next_mtn": "ui_voice_status_009#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_009#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 9"
+          }
+        ]
       }
     ],
     "ui_select_0145#4": [
@@ -4149,8 +4226,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_010",
-        "next_mtn": "ui_voice_status_010#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_010#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 10"
+          }
+        ]
       }
     ],
     "ui_select_0146#4": [
@@ -4159,8 +4243,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_011",
-        "next_mtn": "ui_voice_status_011#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_011#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 11"
+          }
+        ]
       }
     ],
     "ui_voice_list_004#4": [
@@ -4205,8 +4296,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_012",
-        "next_mtn": "ui_voice_status_012#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_012#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 12"
+          }
+        ]
       }
     ],
     "ui_select_0148#4": [
@@ -4215,8 +4313,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_013",
-        "next_mtn": "ui_voice_status_013#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_013#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 13"
+          }
+        ]
       }
     ],
     "ui_select_0149#4": [
@@ -4225,8 +4330,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_014",
-        "next_mtn": "ui_voice_status_014#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_014#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 14"
+          }
+        ]
       }
     ],
     "ui_voice_list_005#4": [
@@ -4271,8 +4383,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_015",
-        "next_mtn": "ui_voice_status_015#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_015#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 15"
+          }
+        ]
       }
     ],
     "ui_select_0151#4": [
@@ -4281,8 +4400,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_016",
-        "next_mtn": "ui_voice_status_016#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_016#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 16"
+          }
+        ]
       }
     ],
     "ui_select_0152#4": [
@@ -4291,8 +4417,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_017",
-        "next_mtn": "ui_voice_status_017#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_017#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 17"
+          }
+        ]
       }
     ],
     "ui_voice_list_006#4": [
@@ -4337,8 +4470,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_018",
-        "next_mtn": "ui_voice_status_018#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_018#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 18"
+          }
+        ]
       }
     ],
     "ui_select_0154#4": [
@@ -4347,8 +4487,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_019",
-        "next_mtn": "ui_voice_status_019#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_019#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 19"
+          }
+        ]
       }
     ],
     "ui_select_0155#4": [
@@ -4357,8 +4504,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_020",
-        "next_mtn": "ui_voice_status_020#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_020#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 20"
+          }
+        ]
       }
     ],
     "ui_voice_list_007#4": [
@@ -4403,8 +4557,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_021",
-        "next_mtn": "ui_voice_status_021#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_021#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 21"
+          }
+        ]
       }
     ],
     "ui_select_0157#4": [
@@ -4413,8 +4574,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_022",
-        "next_mtn": "ui_voice_status_022#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_022#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 22"
+          }
+        ]
       }
     ],
     "ui_voice_list_008#4": [
@@ -4451,8 +4619,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_000",
-        "next_mtn": "ui_voice_status_000#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_000#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
       }
     ],
     "ui_voice_status_000#4": [
@@ -4484,6 +4659,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_000#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4493,8 +4712,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_001",
-        "next_mtn": "ui_voice_status_001#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_001#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
       }
     ],
     "ui_voice_status_001#4": [
@@ -4526,6 +4752,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_001#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4535,8 +4805,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_002",
-        "next_mtn": "ui_voice_status_002#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_002#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 2"
+          }
+        ]
       }
     ],
     "ui_voice_status_002#4": [
@@ -4568,6 +4845,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_002#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4577,8 +4898,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_003",
-        "next_mtn": "ui_voice_status_003#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_003#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 3"
+          }
+        ]
       }
     ],
     "ui_voice_status_003#4": [
@@ -4610,6 +4938,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_003#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4619,8 +4991,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_004",
-        "next_mtn": "ui_voice_status_004#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_004#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 4"
+          }
+        ]
       }
     ],
     "ui_voice_status_004#4": [
@@ -4652,6 +5031,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_004#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4661,8 +5084,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_005",
-        "next_mtn": "ui_voice_status_005#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_005#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 5"
+          }
+        ]
       }
     ],
     "ui_voice_status_005#4": [
@@ -4694,6 +5124,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_005#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4703,8 +5177,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_006",
-        "next_mtn": "ui_voice_status_006#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_006#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 6"
+          }
+        ]
       }
     ],
     "ui_voice_status_006#4": [
@@ -4736,6 +5217,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_006#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4745,8 +5270,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_007",
-        "next_mtn": "ui_voice_status_007#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_007#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 7"
+          }
+        ]
       }
     ],
     "ui_voice_status_007#4": [
@@ -4778,6 +5310,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_007#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4787,8 +5363,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_008",
-        "next_mtn": "ui_voice_status_008#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_008#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 8"
+          }
+        ]
       }
     ],
     "ui_voice_status_008#4": [
@@ -4820,6 +5403,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_008#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4829,8 +5456,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_009",
-        "next_mtn": "ui_voice_status_009#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_009#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 9"
+          }
+        ]
       }
     ],
     "ui_voice_status_009#4": [
@@ -4862,6 +5496,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_009#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4871,8 +5549,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_010",
-        "next_mtn": "ui_voice_status_010#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_010#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 10"
+          }
+        ]
       }
     ],
     "ui_voice_status_010#4": [
@@ -4904,6 +5589,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_010#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4913,8 +5642,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_011",
-        "next_mtn": "ui_voice_status_011#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_011#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 11"
+          }
+        ]
       }
     ],
     "ui_voice_status_011#4": [
@@ -4946,6 +5682,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_011#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4955,8 +5735,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_012",
-        "next_mtn": "ui_voice_status_012#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_012#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 12"
+          }
+        ]
       }
     ],
     "ui_voice_status_012#4": [
@@ -4988,6 +5775,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_012#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -4997,8 +5828,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_013",
-        "next_mtn": "ui_voice_status_013#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_013#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 13"
+          }
+        ]
       }
     ],
     "ui_voice_status_013#4": [
@@ -5030,6 +5868,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_013#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5039,8 +5921,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_014",
-        "next_mtn": "ui_voice_status_014#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_014#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 14"
+          }
+        ]
       }
     ],
     "ui_voice_status_014#4": [
@@ -5072,6 +5961,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_014#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5081,8 +6014,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_015",
-        "next_mtn": "ui_voice_status_015#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_015#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 15"
+          }
+        ]
       }
     ],
     "ui_voice_status_015#4": [
@@ -5114,6 +6054,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_015#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5123,8 +6107,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_016",
-        "next_mtn": "ui_voice_status_016#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_016#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 16"
+          }
+        ]
       }
     ],
     "ui_voice_status_016#4": [
@@ -5156,6 +6147,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_016#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5165,8 +6200,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_017",
-        "next_mtn": "ui_voice_status_017#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_017#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 17"
+          }
+        ]
       }
     ],
     "ui_voice_status_017#4": [
@@ -5198,6 +6240,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_017#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5207,8 +6293,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_018",
-        "next_mtn": "ui_voice_status_018#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_018#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 18"
+          }
+        ]
       }
     ],
     "ui_voice_status_018#4": [
@@ -5240,6 +6333,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_018#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5249,8 +6386,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_019",
-        "next_mtn": "ui_voice_status_019#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_019#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 19"
+          }
+        ]
       }
     ],
     "ui_voice_status_019#4": [
@@ -5282,6 +6426,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_019#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5291,8 +6479,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_020",
-        "next_mtn": "ui_voice_status_020#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_020#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 20"
+          }
+        ]
       }
     ],
     "ui_voice_status_020#4": [
@@ -5324,6 +6519,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_020#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5333,8 +6572,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_021",
-        "next_mtn": "ui_voice_status_021#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_021#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 21"
+          }
+        ]
       }
     ],
     "ui_voice_status_021#4": [
@@ -5366,6 +6612,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_021#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5375,8 +6665,15 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_022",
-        "next_mtn": "ui_voice_status_022#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_022#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 22"
+          }
+        ]
       }
     ],
     "ui_voice_status_022#4": [
@@ -5408,6 +6705,50 @@
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
           }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "正在播放（字幕已关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "重播",
+            "next_mtn": "ui_voice_play_022#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
         ]
       }
     ],
@@ -5417,195 +6758,360 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_000",
-        "next_mtn": "ui_voice_status_000#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_000#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
       },
       {
         "name": "voice_001",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_001",
-        "next_mtn": "ui_voice_status_001#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_001#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
       },
       {
         "name": "voice_002",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_002",
-        "next_mtn": "ui_voice_status_002#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_002#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 2"
+          }
+        ]
       },
       {
         "name": "voice_003",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_003",
-        "next_mtn": "ui_voice_status_003#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_003#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 3"
+          }
+        ]
       },
       {
         "name": "voice_004",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_004",
-        "next_mtn": "ui_voice_status_004#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_004#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 4"
+          }
+        ]
       },
       {
         "name": "voice_005",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_005",
-        "next_mtn": "ui_voice_status_005#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_005#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 5"
+          }
+        ]
       },
       {
         "name": "voice_006",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_006",
-        "next_mtn": "ui_voice_status_006#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_006#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 6"
+          }
+        ]
       },
       {
         "name": "voice_007",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_007",
-        "next_mtn": "ui_voice_status_007#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_007#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 7"
+          }
+        ]
       },
       {
         "name": "voice_008",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_008",
-        "next_mtn": "ui_voice_status_008#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_008#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 8"
+          }
+        ]
       },
       {
         "name": "voice_009",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_009",
-        "next_mtn": "ui_voice_status_009#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_009#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 9"
+          }
+        ]
       },
       {
         "name": "voice_010",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_010",
-        "next_mtn": "ui_voice_status_010#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_010#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 10"
+          }
+        ]
       },
       {
         "name": "voice_011",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_011",
-        "next_mtn": "ui_voice_status_011#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_011#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 11"
+          }
+        ]
       },
       {
         "name": "voice_012",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_012",
-        "next_mtn": "ui_voice_status_012#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_012#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 12"
+          }
+        ]
       },
       {
         "name": "voice_013",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_013",
-        "next_mtn": "ui_voice_status_013#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_013#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 13"
+          }
+        ]
       },
       {
         "name": "voice_014",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_014",
-        "next_mtn": "ui_voice_status_014#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_014#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 14"
+          }
+        ]
       },
       {
         "name": "voice_015",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_015",
-        "next_mtn": "ui_voice_status_015#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_015#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 15"
+          }
+        ]
       },
       {
         "name": "voice_016",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_016",
-        "next_mtn": "ui_voice_status_016#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_016#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 16"
+          }
+        ]
       },
       {
         "name": "voice_017",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_017",
-        "next_mtn": "ui_voice_status_017#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_017#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 17"
+          }
+        ]
       },
       {
         "name": "voice_018",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_018",
-        "next_mtn": "ui_voice_status_018#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_018#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 18"
+          }
+        ]
       },
       {
         "name": "voice_019",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_019",
-        "next_mtn": "ui_voice_status_019#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_019#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 19"
+          }
+        ]
       },
       {
         "name": "voice_020",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_020",
-        "next_mtn": "ui_voice_status_020#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_020#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 20"
+          }
+        ]
       },
       {
         "name": "voice_021",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_021",
-        "next_mtn": "ui_voice_status_021#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_021#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 21"
+          }
+        ]
       },
       {
         "name": "voice_022",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 2; stop_all_sounds; start_mtn ui_voice#2:voice_022",
-        "next_mtn": "ui_voice_status_022#4"
+        "command": "stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_sayo carrier_replay_voice",
+        "next_mtn": "ui_voice_status_022#4",
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 2,
+            "code": "assign 22"
+          }
+        ]
       }
     ],
     "ui_voices#4": [
       {
-        "name": "run",
+        "name": "captions_1",
         "priority": 9,
         "interruptable": true,
         "motion_duration": 60000,
-        "text": "语音",
+        "text": "语音（字幕开启）",
         "text_duration": 60000,
         "choices": [
+          {
+            "text": "关闭字幕",
+            "next_mtn": "ui_captions_off_action#4"
+          },
           {
             "text": "随机播放",
             "next_mtn": "ui_voice_random#4"
@@ -5625,6 +7131,54 @@
           {
             "text": "关闭菜单",
             "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "captions_0",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "语音（字幕关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "开启字幕",
+            "next_mtn": "ui_captions_on_action#4"
+          },
+          {
+            "text": "随机播放",
+            "next_mtn": "ui_voice_random#4"
+          },
+          {
+            "text": "语音列表",
+            "next_mtn": "ui_voice_list_001#4"
+          },
+          {
+            "text": "停止播放",
+            "next_mtn": "ui_stop_voice#4"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
           }
         ]
       }
@@ -5697,7 +7251,246 @@
       {
         "name": "voice_000",
         "sound": "assets/voices/d826cb19ee1c7f973a41fec59f9053ad.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "……对不起。我话说得太重了"
+      },
+      {
+        "name": "voice_001",
+        "sound": "assets/voices/d6d5e419e1571324efc773b982108ecf.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "……好了，里美先确认现场的安全……"
+      },
+      {
+        "name": "voice_002",
+        "sound": "assets/voices/afda22a90cf7f3d3362fd1a6bfbcd2fc.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "……为什么……为什么……"
+      },
+      {
+        "name": "voice_003",
+        "sound": "assets/voices/ae8f2169b4064f946c5742e0bdbd32db.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "嗯，前提是要成功……"
+      },
+      {
+        "name": "voice_004",
+        "sound": "assets/voices/e2350ca040acf94e77920dcad52a67ca.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "欢迎回来，感谢您的预约。"
+      },
+      {
+        "name": "voice_005",
+        "sound": "assets/voices/f7ba294e31e51966c2bdbf185b92231e.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "恐怕，正确答案应该是那个“焦糖化”。"
+      },
+      {
+        "name": "voice_006",
+        "sound": "assets/voices/97bbaa5f474bb7e44abef39c31a62e1b.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "抱歉，让您看到我这么丢脸的样子……"
+      },
+      {
+        "name": "voice_007",
+        "sound": "assets/voices/9fe1b0627ff2defc049a2312cb72e6f5.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "是这样啊。可是……"
+      },
+      {
+        "name": "voice_008",
+        "sound": "assets/voices/39262c6c25064a9885870823bf06bdac.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "那么你要做的只有一件事"
+      },
+      {
+        "name": "voice_009",
+        "sound": "assets/voices/3244443f1ae4b1bfd9b583b212e06377.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "唉……你敢对我恶作剧，我就要生气了哦"
+      },
+      {
+        "name": "voice_010",
+        "sound": "assets/voices/bb8ebe31ad1a1665c46b0952f7f4d2cd.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "呵呵，看来你真的很期待呢"
+      },
+      {
+        "name": "voice_011",
+        "sound": "assets/voices/c88723ada61d6e8118e453a4b1d71ee5.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "你是打算选择进入职业音乐圈这条路吗？"
+      },
+      {
+        "name": "voice_012",
+        "sound": "assets/voices/8aefb9184bd25860bf9231add0a2886f.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "真是超出想象的大规模回忆呢"
+      },
+      {
+        "name": "voice_013",
+        "sound": "assets/voices/664b7f0ca34fe86712f925e3d3059f9c.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "今井同学已经完全恢复到平常的样子了……大家昨天都睡得好吗？"
+      },
+      {
+        "name": "voice_014",
+        "sound": "assets/voices/7b201435679e86232143e8a6e73233df.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "拿你没办法……快点回去吧"
+      },
+      {
+        "name": "voice_015",
+        "sound": "assets/voices/dbcc4ab8181c8ebb54a7d40e6da19b5b.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "希望你不光嘴上说说，也能用琴声证明"
+      },
+      {
+        "name": "voice_016",
+        "sound": "assets/voices/8ed44428d394434843c04fba2db336a5.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "你说有重要的事情要告诉我们……"
+      },
+      {
+        "name": "voice_017",
+        "sound": "assets/voices/cfa26bdd2e7db8ccc491e90436b363f9.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "现磨的咖啡……有种安定人心的香气"
+      },
+      {
+        "name": "voice_018",
+        "sound": "assets/voices/cc1f48f21d9336dff2ee7c3a7042a913.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "日菜，不要像这样捉弄别人！"
+      },
+      {
+        "name": "voice_019",
+        "sound": "assets/voices/becbea162e96da0d907038568b78018b.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "这倒是没问题……不过，空调的情况到底是怎样的？"
+      },
+      {
+        "name": "voice_020",
+        "sound": "assets/voices/e6130f860b11e331176c9eaaf18f930f.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "不穿。本来也没必要穿吧"
+      },
+      {
+        "name": "voice_021",
+        "sound": "assets/voices/f17f72aa3efb1ce586a999ff72e5ffcf.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "我……觉得很厉害"
+      },
+      {
+        "name": "voice_022",
+        "sound": "assets/voices/c61c0eb70dda1123efe28d2c1317f4e7.mp3",
+        "command": "lip_sync enforce",
+        "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true,
+        "text": "因为我不擅长画画……有点担心"
+      }
+    ],
+    "ui_tap_body#6": [
+      {
+        "name": "tap_body",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "next_mtn": "ui_motion_body"
+      }
+    ],
+    "ui_tap_left#6": [
+      {
+        "name": "tap_left",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "next_mtn": "ui_motion_body"
+      }
+    ],
+    "ui_tap_right#6": [
+      {
+        "name": "tap_right",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "next_mtn": "ui_motion_body"
+      }
+    ],
+    "ui_voice_tap_plain#2": [
+      {
+        "name": "voice_000",
+        "sound": "assets/voices/d826cb19ee1c7f973a41fec59f9053ad.mp3",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5705,7 +7498,7 @@
       {
         "name": "voice_001",
         "sound": "assets/voices/d6d5e419e1571324efc773b982108ecf.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5713,7 +7506,7 @@
       {
         "name": "voice_002",
         "sound": "assets/voices/afda22a90cf7f3d3362fd1a6bfbcd2fc.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5721,7 +7514,7 @@
       {
         "name": "voice_003",
         "sound": "assets/voices/ae8f2169b4064f946c5742e0bdbd32db.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5729,7 +7522,7 @@
       {
         "name": "voice_004",
         "sound": "assets/voices/e2350ca040acf94e77920dcad52a67ca.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5737,7 +7530,7 @@
       {
         "name": "voice_005",
         "sound": "assets/voices/f7ba294e31e51966c2bdbf185b92231e.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5745,7 +7538,7 @@
       {
         "name": "voice_006",
         "sound": "assets/voices/97bbaa5f474bb7e44abef39c31a62e1b.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5753,7 +7546,7 @@
       {
         "name": "voice_007",
         "sound": "assets/voices/9fe1b0627ff2defc049a2312cb72e6f5.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5761,7 +7554,7 @@
       {
         "name": "voice_008",
         "sound": "assets/voices/39262c6c25064a9885870823bf06bdac.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5769,7 +7562,7 @@
       {
         "name": "voice_009",
         "sound": "assets/voices/3244443f1ae4b1bfd9b583b212e06377.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5777,7 +7570,7 @@
       {
         "name": "voice_010",
         "sound": "assets/voices/bb8ebe31ad1a1665c46b0952f7f4d2cd.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5785,7 +7578,7 @@
       {
         "name": "voice_011",
         "sound": "assets/voices/c88723ada61d6e8118e453a4b1d71ee5.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5793,7 +7586,7 @@
       {
         "name": "voice_012",
         "sound": "assets/voices/8aefb9184bd25860bf9231add0a2886f.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5801,7 +7594,7 @@
       {
         "name": "voice_013",
         "sound": "assets/voices/664b7f0ca34fe86712f925e3d3059f9c.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5809,7 +7602,7 @@
       {
         "name": "voice_014",
         "sound": "assets/voices/7b201435679e86232143e8a6e73233df.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5817,7 +7610,7 @@
       {
         "name": "voice_015",
         "sound": "assets/voices/dbcc4ab8181c8ebb54a7d40e6da19b5b.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5825,7 +7618,7 @@
       {
         "name": "voice_016",
         "sound": "assets/voices/8ed44428d394434843c04fba2db336a5.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5833,7 +7626,7 @@
       {
         "name": "voice_017",
         "sound": "assets/voices/cfa26bdd2e7db8ccc491e90436b363f9.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5841,7 +7634,7 @@
       {
         "name": "voice_018",
         "sound": "assets/voices/cc1f48f21d9336dff2ee7c3a7042a913.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5849,7 +7642,7 @@
       {
         "name": "voice_019",
         "sound": "assets/voices/becbea162e96da0d907038568b78018b.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5857,7 +7650,7 @@
       {
         "name": "voice_020",
         "sound": "assets/voices/e6130f860b11e331176c9eaaf18f930f.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5865,7 +7658,7 @@
       {
         "name": "voice_021",
         "sound": "assets/voices/f17f72aa3efb1ce586a999ff72e5ffcf.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
@@ -5873,37 +7666,475 @@
       {
         "name": "voice_022",
         "sound": "assets/voices/c61c0eb70dda1123efe28d2c1317f4e7.mp3",
-        "command": "stop_all_sounds; lip_sync enforce",
+        "command": "lip_sync enforce",
         "post_command": "lip_sync enable",
         "priority": 9,
         "interruptable": true
       }
     ],
-    "ui_tap_body#6": [
+    "ui_tap_voice#6": [
       {
-        "name": "tap_body",
-        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
-        "motion_duration": 1,
+        "name": "run",
         "priority": 9,
-        "interruptable": true
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_sayo carrier_tap_voice"
       }
     ],
-    "ui_tap_left#6": [
+    "ui_captions_on#6": [
       {
-        "name": "tap_left",
-        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
-        "motion_duration": 1,
+        "name": "run",
         "priority": 9,
-        "interruptable": true
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
       }
     ],
-    "ui_tap_right#6": [
+    "ui_captions_on_menu#6": [
       {
-        "name": "tap_right",
-        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
-        "motion_duration": 1,
+        "name": "run",
         "priority": 9,
-        "interruptable": true
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ],
+        "next_mtn": "ui_voices#4"
+      }
+    ],
+    "ui_captions_on_action#4": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_sayo carrier_hide_text#5; start_mtn garupa_l2d_carrier_sayo carrier_captions_on"
+      }
+    ],
+    "ui_captions_off#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "ui_captions_off_menu#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ],
+        "next_mtn": "ui_voices#4"
+      }
+    ],
+    "ui_captions_off_action#4": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_sayo carrier_hide_text#5; start_mtn garupa_l2d_carrier_sayo carrier_captions_off"
+      }
+    ],
+    "ui_prepare_voice_caption#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "stop_mtn 4; stop_mtn 2; stop_all_sounds",
+        "next_mtn": "ui_voice_tap#2"
+      }
+    ],
+    "ui_prepare_voice_plain#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "stop_mtn 4; stop_mtn 2; stop_all_sounds",
+        "next_mtn": "ui_voice_tap_plain#2"
+      }
+    ],
+    "ui_play_selected_voice#6": [
+      {
+        "name": "voice_000",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_000"
+      },
+      {
+        "name": "voice_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_001"
+      },
+      {
+        "name": "voice_002",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 2"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_002"
+      },
+      {
+        "name": "voice_003",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 3"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_003"
+      },
+      {
+        "name": "voice_004",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 4"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_004"
+      },
+      {
+        "name": "voice_005",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 5"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_005"
+      },
+      {
+        "name": "voice_006",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 6"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_006"
+      },
+      {
+        "name": "voice_007",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 7"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_007"
+      },
+      {
+        "name": "voice_008",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 8"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_008"
+      },
+      {
+        "name": "voice_009",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 9"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_009"
+      },
+      {
+        "name": "voice_010",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 10"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_010"
+      },
+      {
+        "name": "voice_011",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 11"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_011"
+      },
+      {
+        "name": "voice_012",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 12"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_012"
+      },
+      {
+        "name": "voice_013",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 13"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_013"
+      },
+      {
+        "name": "voice_014",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 14"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_014"
+      },
+      {
+        "name": "voice_015",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 15"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_015"
+      },
+      {
+        "name": "voice_016",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 16"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_016"
+      },
+      {
+        "name": "voice_017",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 17"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_017"
+      },
+      {
+        "name": "voice_018",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 18"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_018"
+      },
+      {
+        "name": "voice_019",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 19"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_019"
+      },
+      {
+        "name": "voice_020",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 20"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_020"
+      },
+      {
+        "name": "voice_021",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 21"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_021"
+      },
+      {
+        "name": "voice_022",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_voice",
+            "type": 1,
+            "code": "equal 22"
+          }
+        ],
+        "next_mtn": "ui_voice#2:voice_022"
+      }
+    ],
+    "ui_startup_on_menu#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ],
+        "next_mtn": "ui_main#4"
+      }
+    ],
+    "ui_startup_off_menu#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ],
+        "next_mtn": "ui_main#4"
       }
     ]
   },

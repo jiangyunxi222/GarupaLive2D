@@ -1112,10 +1112,17 @@
         "priority": 9,
         "interruptable": false,
         "command": "stop_all_sounds; parameters unlock; parts unlock; animations unlock; clear_exp",
-        "post_command": "replace_tex 0 assets/textures/4a5fba46f4a92724e696f7aa8dae5b04.png; replace_tex 1 assets/textures/28fa4edfe83ce3a64eebf69c589070e9.png; start_mtn ui_main#4",
+        "post_command": "replace_tex 0 assets/textures/4a5fba46f4a92724e696f7aa8dae5b04.png; replace_tex 1 assets/textures/28fa4edfe83ce3a64eebf69c589070e9.png; start_mtn garupa_l2d_carrier_anon carrier_finish_costume",
         "file": "assets/motions/584f963f5dd15f88f3e592f11f46e261.mtn",
         "file_loop": true,
-        "next_mtn": "idle"
+        "next_mtn": "idle",
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "init 1"
+          }
+        ]
       }
     ],
     "ui_close#4": [
@@ -1124,7 +1131,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "hide_text"
+        "command": "start_mtn garupa_l2d_carrier_anon carrier_hide_text#5"
       }
     ],
     "ui_reset#4": [
@@ -3187,7 +3194,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "hide_text",
+        "command": "start_mtn garupa_l2d_carrier_anon carrier_manual_wardrobe#5",
         "next_mtn": "ui_wardrobe_001#4"
       }
     ],
@@ -3200,6 +3207,10 @@
         "text": "声音与控制",
         "text_duration": 60000,
         "choices": [
+          {
+            "text": "语音",
+            "next_mtn": "ui_voices#4"
+          },
           {
             "text": "停止声音",
             "next_mtn": "ui_stop_voice#4"
@@ -3254,7 +3265,9 @@
     "ui_voice_tap#2": [
       {
         "name": "no_voice",
-        "motion_duration": 1,
+        "text": "当前角色未提供语音素材",
+        "motion_duration": 3000,
+        "text_duration": 3000,
         "priority": 9,
         "interruptable": true
       }
@@ -3262,28 +3275,258 @@
     "ui_tap_body#6": [
       {
         "name": "tap_body",
-        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock",
         "motion_duration": 1,
         "priority": 9,
-        "interruptable": true
+        "interruptable": true,
+        "next_mtn": "ui_motion_body"
       }
     ],
     "ui_tap_left#6": [
       {
         "name": "tap_left",
-        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock",
         "motion_duration": 1,
         "priority": 9,
-        "interruptable": true
+        "interruptable": true,
+        "next_mtn": "ui_motion_body"
       }
     ],
     "ui_tap_right#6": [
       {
         "name": "tap_right",
-        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock",
         "motion_duration": 1,
         "priority": 9,
+        "interruptable": true,
+        "next_mtn": "ui_motion_body"
+      }
+    ],
+    "ui_voice_tap_plain#2": [
+      {
+        "name": "no_voice",
+        "text": "当前角色未提供语音素材",
+        "motion_duration": 3000,
+        "text_duration": 3000,
+        "priority": 9,
         "interruptable": true
+      }
+    ],
+    "ui_tap_voice#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_anon carrier_tap_voice"
+      }
+    ],
+    "ui_captions_on#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "ui_captions_on_menu#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ],
+        "next_mtn": "ui_voices#4"
+      }
+    ],
+    "ui_captions_on_action#4": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_anon carrier_hide_text#5; start_mtn garupa_l2d_carrier_anon carrier_captions_on"
+      }
+    ],
+    "ui_captions_off#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "ui_captions_off_menu#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ],
+        "next_mtn": "ui_voices#4"
+      }
+    ],
+    "ui_captions_off_action#4": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_anon carrier_hide_text#5; start_mtn garupa_l2d_carrier_anon carrier_captions_off"
+      }
+    ],
+    "ui_voices#4": [
+      {
+        "name": "captions_1",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "语音（字幕开启）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "关闭字幕",
+            "next_mtn": "ui_captions_off_action#4"
+          },
+          {
+            "text": "随机播放",
+            "next_mtn": "ui_tap_voice#6"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "captions_0",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 60000,
+        "text": "语音（字幕关闭）",
+        "text_duration": 60000,
+        "choices": [
+          {
+            "text": "开启字幕",
+            "next_mtn": "ui_captions_on_action#4"
+          },
+          {
+            "text": "随机播放",
+            "next_mtn": "ui_tap_voice#6"
+          },
+          {
+            "text": "返回主菜单",
+            "next_mtn": "ui_main#4"
+          },
+          {
+            "text": "关闭菜单",
+            "next_mtn": "ui_close#4"
+          }
+        ],
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ]
+      }
+    ],
+    "ui_prepare_voice_caption#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "stop_mtn 4; stop_mtn 2; stop_all_sounds",
+        "next_mtn": "ui_voice_tap#2"
+      }
+    ],
+    "ui_prepare_voice_plain#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "stop_mtn 4; stop_mtn 2; stop_all_sounds",
+        "next_mtn": "ui_voice_tap_plain#2"
+      }
+    ],
+    "ui_play_selected_voice#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1
+      }
+    ],
+    "ui_startup_on_menu#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ],
+        "next_mtn": "ui_main#4"
+      }
+    ],
+    "ui_startup_off_menu#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "voice_captions_enabled",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ],
+        "next_mtn": "ui_main#4"
       }
     ]
   },
