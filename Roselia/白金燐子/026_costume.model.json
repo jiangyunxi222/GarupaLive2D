@@ -73,85 +73,85 @@
     {
       "name": "换装",
       "id": "D_PSD.23",
-      "order": 100,
+      "order": 20,
       "motion": "ui_open_wardrobe#4"
     },
     {
       "name": "语音",
       "id": "D_PSD.31",
-      "order": 10,
+      "order": 50,
       "motion": "ui_voice_tap#2"
     },
     {
       "name": "动作（正面）",
       "id": "D_PSD.88",
-      "order": 8,
-      "motion": "ui_quick_body#4"
+      "order": 30,
+      "motion": "ui_tap_body#6"
     },
     {
       "name": "动作（左手）",
       "id": "D_PSD1.36",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（左手）2",
       "id": "D_PSD1.34",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（左手）3",
       "id": "D_PSD1.56",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（左手）4",
       "id": "D_PSD1.49",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（右手）",
       "id": "D_PSD1.15",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "动作（右手）2",
       "id": "D_PSD1.27",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "动作（右手）3",
       "id": "D_PSD1.45",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "动作（右手）4",
       "id": "D_PSD1.42",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "菜单",
       "id": "D_PSD.27",
-      "order": 3,
+      "order": 10,
       "motion": "ui_main#4"
     },
     {
       "name": "菜单2",
       "id": "D_PSD.53",
-      "order": 3,
+      "order": 10,
       "motion": "ui_main#4"
     },
     {
       "name": "菜单3",
       "id": "D_PSD.55",
-      "order": 3,
+      "order": 10,
       "motion": "ui_main#4"
     }
   ],
@@ -586,42 +586,42 @@
         "name": "exp_000",
         "command": "clear_exp; set_exp assets/expressions/f70d3c40277549b7d676f5cd59205fdf.exp.json",
         "motion_duration": 1,
-        "priority": 3,
+        "priority": 9,
         "interruptable": true
       },
       {
         "name": "exp_001",
         "command": "clear_exp; set_exp assets/expressions/7e23600f9f4de38d258196b02abe0598.exp.json",
         "motion_duration": 1,
-        "priority": 3,
+        "priority": 9,
         "interruptable": true
       },
       {
         "name": "exp_002",
         "command": "clear_exp; set_exp assets/expressions/537586245fcf51b3fcb41c75920e1333.exp.json",
         "motion_duration": 1,
-        "priority": 3,
+        "priority": 9,
         "interruptable": true
       },
       {
         "name": "exp_003",
         "command": "clear_exp; set_exp assets/expressions/b4a0efb60ed749bd48434498d5a8d284.exp.json",
         "motion_duration": 1,
-        "priority": 3,
+        "priority": 9,
         "interruptable": true
       },
       {
         "name": "exp_004",
         "command": "clear_exp; set_exp assets/expressions/0b9a67b2aa10c810c2b4c6c59b89fe70.exp.json",
         "motion_duration": 1,
-        "priority": 3,
+        "priority": 9,
         "interruptable": true
       },
       {
         "name": "exp_005",
         "command": "clear_exp; set_exp assets/expressions/b3e16093eb468077eba85786ae2a36cd.exp.json",
         "motion_duration": 1,
-        "priority": 3,
+        "priority": 9,
         "interruptable": true
       }
     ],
@@ -5795,6 +5795,33 @@
         "sound": "assets/voices/e35ca430adac7e7af03ea4264758f342.mp3",
         "command": "stop_all_sounds; lip_sync enforce",
         "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true
+      }
+    ],
+    "ui_tap_body#6": [
+      {
+        "name": "tap_body",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true
+      }
+    ],
+    "ui_tap_left#6": [
+      {
+        "name": "tap_left",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true
+      }
+    ],
+    "ui_tap_right#6": [
+      {
+        "name": "tap_right",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "motion_duration": 1,
         "priority": 9,
         "interruptable": true
       }

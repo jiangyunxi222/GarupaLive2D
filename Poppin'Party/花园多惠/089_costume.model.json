@@ -74,85 +74,85 @@
     {
       "name": "换装",
       "id": "D_PSD.54",
-      "order": 100,
+      "order": 20,
       "motion": "ui_open_wardrobe#4"
     },
     {
       "name": "语音",
       "id": "D_PSD.55",
-      "order": 10,
+      "order": 50,
       "motion": "ui_voice_tap#2"
     },
     {
       "name": "动作（正面）",
       "id": "D_PSD.08",
-      "order": 8,
-      "motion": "ui_quick_body#4"
+      "order": 30,
+      "motion": "ui_tap_body#6"
     },
     {
       "name": "动作（左手）",
       "id": "D_PSD.42",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（左手）2",
       "id": "D_PSD.37",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（左手）3",
       "id": "D_PSD.11",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（左手）4",
       "id": "D_PSD.47",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_left#6"
     },
     {
       "name": "动作（右手）",
       "id": "D_PSD.07",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "动作（右手）2",
       "id": "D_PSD.24",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "动作（右手）3",
       "id": "D_PSD.05",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "动作（右手）4",
       "id": "D_PSD.16",
-      "order": 5,
-      "motion": "ui_main#4"
+      "order": 40,
+      "motion": "ui_tap_right#6"
     },
     {
       "name": "菜单",
       "id": "D_PSD.03",
-      "order": 3,
+      "order": 10,
       "motion": "ui_main#4"
     },
     {
       "name": "菜单2",
       "id": "D_PSD.108",
-      "order": 3,
+      "order": 10,
       "motion": "ui_main#4"
     },
     {
       "name": "菜单3",
       "id": "D_PSD.109",
-      "order": 3,
+      "order": 10,
       "motion": "ui_main#4"
     }
   ],
@@ -5964,6 +5964,42 @@
         "sound": "assets/voices/25222f44f99c6ba6c4aa86b90473158a.mp3",
         "command": "stop_all_sounds; lip_sync enforce",
         "post_command": "lip_sync enable",
+        "priority": 9,
+        "interruptable": true
+      }
+    ],
+    "ui_tap_body#6": [
+      {
+        "name": "tap_body",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true
+      }
+    ],
+    "ui_tap_left#6": [
+      {
+        "name": "tap_left",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true
+      }
+    ],
+    "ui_tap_right#6": [
+      {
+        "name": "tap_right",
+        "command": "stop_mtn 1; stop_mtn 0; animations unlock; parameters unlock; start_mtn ui_motion_body",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true
+      }
+    ],
+    "ui_expression#3": [
+      {
+        "name": "no_expression",
+        "command": "clear_exp",
+        "motion_duration": 1,
         "priority": 9,
         "interruptable": true
       }
