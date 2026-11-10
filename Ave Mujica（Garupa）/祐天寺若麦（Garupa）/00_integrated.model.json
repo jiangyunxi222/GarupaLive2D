@@ -17,13 +17,7 @@
     "param_hit": {},
     "param_loop": {},
     "key_trigger": {
-      "items": [
-        {
-          "input": 1,
-          "down_mtn": "l2d_menu_down#5",
-          "up_mtn": "l2d_menu_up#5"
-        }
-      ],
+      "items": [],
       "enabled": true
     },
     "param_trigger": {},
@@ -67,48 +61,14 @@
     "battery": {}
   },
   "motions": {
-    "idle": [
-      {
-        "name": "idle",
-        "file": "assets/motions/4da6a555ab9f98fa91063fdbf84c4db0.mtn",
-        "interruptable": true
-      }
-    ],
-    "start": [
-      {
-        "name": "initialize_anchor",
-        "motion_duration": 1,
-        "priority": 9,
-        "next_mtn": "restore_costume",
-        "var_floats": [
-          {
-            "name": "selected_costume",
-            "type": 2,
-            "code": "init 1"
-          }
-        ]
-      }
-    ],
     "carrier_switch_000": [
       {
         "name": "switch",
-        "text": "换装中…",
-        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 001_costume.model.json 1",
-        "text_duration": 1000,
-        "motion_duration": 200,
-        "priority": 2,
+        "command": "hide_text; remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 001_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
         "interruptable": true,
         "var_floats": [
-          {
-            "name": "l2d_carrier_active",
-            "type": 2,
-            "code": "assign 0"
-          },
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          },
           {
             "name": "selected_costume",
             "type": 0,
@@ -125,23 +85,11 @@
     "carrier_switch_001": [
       {
         "name": "switch",
-        "text": "换装中…",
-        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 002_costume.model.json 1",
-        "text_duration": 1000,
-        "motion_duration": 200,
-        "priority": 2,
+        "command": "hide_text; remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 002_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
         "interruptable": true,
         "var_floats": [
-          {
-            "name": "l2d_carrier_active",
-            "type": 2,
-            "code": "assign 1"
-          },
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          },
           {
             "name": "selected_costume",
             "type": 0,
@@ -158,20 +106,11 @@
     "carrier_random": [
       {
         "name": "random_000",
-        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 001_costume.model.json 1",
-        "motion_duration": 200,
-        "priority": 2,
+        "command": "hide_text; remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 001_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
         "var_floats": [
-          {
-            "name": "l2d_carrier_active",
-            "type": 1,
-            "code": "not_equal 0"
-          },
-          {
-            "name": "l2d_carrier_active",
-            "type": 2,
-            "code": "assign 0"
-          },
           {
             "name": "selected_costume",
             "type": 0,
@@ -186,20 +125,11 @@
       },
       {
         "name": "random_001",
-        "command": "remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 002_costume.model.json 1",
-        "motion_duration": 200,
-        "priority": 2,
+        "command": "hide_text; remove_submodel 001_costume.model.json;remove_submodel 002_costume.model.json;add_submodel 002_costume.model.json 1",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
         "var_floats": [
-          {
-            "name": "l2d_carrier_active",
-            "type": 1,
-            "code": "not_equal 1"
-          },
-          {
-            "name": "l2d_carrier_active",
-            "type": 2,
-            "code": "assign 1"
-          },
           {
             "name": "selected_costume",
             "type": 0,
@@ -213,243 +143,9 @@
         ]
       }
     ],
-    "carrier_wardrobe_0_1": [
-      {
-        "name": "choose",
-        "text": "剧情",
-        "choices": [
-          {
-            "text": "祐天寺若麦（Garupa） · 剧情·活动297剧情01",
-            "next_mtn": "l2d_menu_sel_000#5"
-          },
-          {
-            "text": "返回分类",
-            "next_mtn": "l2d_menu_sel_001#5"
-          }
-        ],
-        "text_duration": 8000,
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ]
-      }
-    ],
-    "carrier_wardrobe_1_1": [
-      {
-        "name": "choose",
-        "text": "常服",
-        "choices": [
-          {
-            "text": "祐天寺若麦（Garupa） · 常服·2023",
-            "next_mtn": "l2d_menu_sel_002#5"
-          },
-          {
-            "text": "返回分类",
-            "next_mtn": "l2d_menu_sel_003#5"
-          }
-        ],
-        "text_duration": 8000,
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ]
-      }
-    ],
-    "carrier_wardrobe": [
-      {
-        "name": "categories",
-        "text": "衣装",
-        "choices": [
-          {
-            "text": "剧情（1）",
-            "next_mtn": "l2d_menu_sel_004#5"
-          },
-          {
-            "text": "常服（1）",
-            "next_mtn": "l2d_menu_sel_005#5"
-          }
-        ],
-        "text_duration": 8000,
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_sel_000#5": [
-      {
-        "name": "menu_select_000",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "next_mtn": "carrier_switch_001",
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_sel_001#5": [
-      {
-        "name": "menu_select_001",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "next_mtn": "carrier_wardrobe",
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_sel_002#5": [
-      {
-        "name": "menu_select_002",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "next_mtn": "carrier_switch_000",
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_sel_003#5": [
-      {
-        "name": "menu_select_003",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "next_mtn": "carrier_wardrobe",
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_sel_004#5": [
-      {
-        "name": "menu_select_004",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "next_mtn": "carrier_wardrobe_0_1",
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_sel_005#5": [
-      {
-        "name": "menu_select_005",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "next_mtn": "carrier_wardrobe_1_1",
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_down#5": [
-      {
-        "name": "menu_down",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 2"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_up#5": [
-      {
-        "name": "menu_up",
-        "motion_duration": 260,
-        "priority": 2,
-        "interruptable": true,
-        "next_mtn": "l2d_menu_verify#5",
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 1,
-            "code": "equal 2"
-          }
-        ]
-      }
-    ],
-    "l2d_menu_verify#5": [
-      {
-        "name": "menu_verify",
-        "command": "hide_text",
-        "motion_duration": 200,
-        "priority": 2,
-        "interruptable": true,
-        "var_floats": [
-          {
-            "name": "l2d_menu_state",
-            "type": 1,
-            "code": "equal 2"
-          },
-          {
-            "name": "l2d_menu_state",
-            "type": 2,
-            "code": "assign 0"
-          }
-        ]
-      }
-    ],
     "restore_costume": [
       {
-        "name": "restore_000",
+        "name": "restore_001",
         "command": "add_submodel 001_costume.model.json 1",
         "motion_duration": 1,
         "priority": 9,
@@ -463,11 +159,117 @@
         ]
       },
       {
-        "name": "restore_001",
+        "name": "restore_002",
         "command": "add_submodel 002_costume.model.json 1",
         "motion_duration": 1,
         "priority": 9,
         "interruptable": true,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 2"
+          }
+        ]
+      }
+    ],
+    "start": [
+      {
+        "name": "initialize_anchor",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 2,
+            "code": "init 1"
+          }
+        ],
+        "next_mtn": "restore_costume"
+      }
+    ],
+    "carrier_wardrobe": [
+      {
+        "name": "route_001",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "command": "start_mtn garupa_l2d_carrier_nyamu_costume_001 ui_open_wardrobe#4",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "route_002",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "command": "start_mtn garupa_l2d_carrier_nyamu_costume_002 ui_open_wardrobe#4",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 2"
+          }
+        ]
+      }
+    ],
+    "carrier_main": [
+      {
+        "name": "route_001",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "command": "start_mtn garupa_l2d_carrier_nyamu_costume_001 ui_main#4",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "route_002",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "command": "start_mtn garupa_l2d_carrier_nyamu_costume_002 ui_main#4",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 2"
+          }
+        ]
+      }
+    ],
+    "carrier_close": [
+      {
+        "name": "route_001",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "command": "start_mtn garupa_l2d_carrier_nyamu_costume_001 ui_close#4",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 0,
+            "code": "equal 1"
+          }
+        ]
+      },
+      {
+        "name": "route_002",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "command": "start_mtn garupa_l2d_carrier_nyamu_costume_002 ui_close#4",
         "var_floats": [
           {
             "name": "selected_costume",
