@@ -205,12 +205,52 @@
           {
             "name": "page_menu_version",
             "type": 2,
-            "code": "assign 4"
+            "code": "assign 7"
           },
           {
             "name": "page_load_count",
             "type": 2,
             "code": "add 1"
+          },
+          {
+            "name": "page_backend_connected",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "page_loop_action",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "page_menu_request",
+            "type": 2,
+            "code": "init 0"
+          },
+          {
+            "name": "page_toggle_request_action",
+            "type": 2,
+            "code": "init 0"
+          },
+          {
+            "name": "page_toggle_request_voice",
+            "type": 2,
+            "code": "init 0"
+          },
+          {
+            "name": "page_toggle_request_costume",
+            "type": 2,
+            "code": "init 0"
           }
         ],
         "next_mtn": "carrier_restore_safe",
@@ -478,7 +518,8 @@
             "type": 2,
             "code": "assign 0"
           }
-        ]
+        ],
+        "post_command": "start_mtn web_sync_frontend#9"
       },
       {
         "name": "finish_1_1_1",
@@ -507,7 +548,8 @@
             "type": 2,
             "code": "assign 0"
           }
-        ]
+        ],
+        "post_command": "start_mtn web_sync_frontend#9"
       },
       {
         "name": "finish_1_0_0",
@@ -536,7 +578,8 @@
             "type": 2,
             "code": "assign 0"
           }
-        ]
+        ],
+        "post_command": "start_mtn web_sync_frontend#9"
       },
       {
         "name": "finish_1_0_1",
@@ -565,7 +608,8 @@
             "type": 2,
             "code": "assign 0"
           }
-        ]
+        ],
+        "post_command": "start_mtn web_sync_frontend#9"
       }
     ],
     "web_action_001_000": [
@@ -3481,6 +3525,409 @@
           }
         ],
         "next_mtn": "carrier_switch_000"
+      }
+    ],
+    "web_set_page_backend_connected_0": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_backend_connected_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_backend_connected",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "web_set_page_backend_connected_1": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_backend_connected_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_backend_connected",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "web_set_page_loop_action_0": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_action_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_action",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "web_set_page_loop_action_1": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_action_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_action",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "web_set_page_loop_voice_0": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_voice_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "web_set_page_loop_voice_1": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_voice_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "web_set_page_loop_costume_0": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_costume_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "web_set_page_loop_costume_1": [
+      {
+        "name": "costume_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_costume_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "web_sync_frontend#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "next_mtn": "web_sync_page_backend_connected#9"
+      }
+    ],
+    "web_sync_page_backend_connected#9": [
+      {
+        "name": "page_backend_connected_0_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_backend_connected_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_backend_connected",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "next_mtn": "web_sync_page_loop_action#9"
+      },
+      {
+        "name": "page_backend_connected_1_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_backend_connected_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_backend_connected",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "next_mtn": "web_sync_page_loop_action#9"
+      }
+    ],
+    "web_sync_page_loop_action#9": [
+      {
+        "name": "page_loop_action_0_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_action_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "next_mtn": "web_sync_page_loop_voice#9"
+      },
+      {
+        "name": "page_loop_action_1_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_action_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "next_mtn": "web_sync_page_loop_voice#9"
+      }
+    ],
+    "web_sync_page_loop_voice#9": [
+      {
+        "name": "page_loop_voice_0_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_voice_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "next_mtn": "web_sync_page_loop_costume#9"
+      },
+      {
+        "name": "page_loop_voice_1_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_voice_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "next_mtn": "web_sync_page_loop_costume#9"
+      }
+    ],
+    "web_sync_page_loop_costume#9": [
+      {
+        "name": "page_loop_costume_0_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_costume_0#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ]
+      },
+      {
+        "name": "page_loop_costume_1_001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 web_set_page_loop_costume_1#9",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ]
+      }
+    ],
+    "page_open_compact#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_menu_request",
+            "type": 2,
+            "code": "add 1"
+          }
+        ]
+      }
+    ],
+    "page_toggle_action#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_toggle_request_action",
+            "type": 2,
+            "code": "add 1"
+          }
+        ]
+      }
+    ],
+    "page_toggle_voice#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_toggle_request_voice",
+            "type": 2,
+            "code": "add 1"
+          }
+        ]
+      }
+    ],
+    "page_toggle_costume#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_toggle_request_costume",
+            "type": 2,
+            "code": "add 1"
+          }
+        ]
       }
     ]
   },
