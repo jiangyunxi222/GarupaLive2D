@@ -468,7 +468,7 @@ class Studio:
                     if (
                         variables.get("page_menu_version") != 7
                         or variables.get("page_input_revision") != 2
-                        or variables.get("motion_rig_revision") != 1
+                        or variables.get("motion_rig_revision") != self.catalog().get("motionRigRevision", 1)
                     ):
                         self.load_native()
                     self.sync_preferences()
@@ -628,7 +628,7 @@ class Studio:
                 attached = (
                     variables.get("page_menu_version") == 7
                     and variables.get("page_input_revision") == 2
-                    and variables.get("motion_rig_revision") == 1
+                    and variables.get("motion_rig_revision") == self.catalog().get("motionRigRevision", 1)
                 )
             if self.slot is None:
                 self.slot = next(
@@ -1175,10 +1175,12 @@ class Studio:
             textures[int(index)] = path
         base = "/assets/" + role_id + "/"
         motions = {}
+        source_fades = role.get("motionFadePolicy") == "source"
         for item in costume["actions"]:
-            motions["page_" + str(item["id"])] = [
-                {"File" if c3 else "file": base + item["file"]}
-            ]
+            definition = {"File" if c3 else "file": base + item["file"]}
+            if source_fades:
+                definition.update(fade_in=item["fadeIn"], fade_out=item["fadeOut"])
+            motions["page_" + str(item["id"])] = [definition]
         idle = groups.get("Idle" if c3 else "idle", [])
         if idle:
             motions["Idle" if c3 else "idle"] = [
@@ -1187,6 +1189,10 @@ class Studio:
                     + idle[0]["File" if c3 else "file"]
                 }
             ]
+            if source_fades:
+                motions["idle"][0].update(
+                    fade_in=idle[0]["fade_in"], fade_out=idle[0]["fade_out"]
+                )
         expressions = [
             {
                 "Name" if c3 else "name": str(item["id"]),
@@ -1226,6 +1232,8 @@ class Studio:
             item.get("Id", item.get("id"))
             for item in controller.get("Items", controller.get("items", []))
         ]
+        if source_fades:
+            result["pageMotionFadePolicy"] = "source"
         return result
 
 
