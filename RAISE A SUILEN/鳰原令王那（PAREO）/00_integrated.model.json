@@ -87510,7 +87510,12 @@
           {
             "name": "motion_rig_revision",
             "type": 2,
-            "code": "assign 3"
+            "code": "assign 4"
+          },
+          {
+            "name": "page_panel_request",
+            "type": 2,
+            "code": "init 0"
           }
         ],
         "next_mtn": "carrier_restore_safe",
@@ -470078,6 +470083,21 @@
           }
         ],
         "next_mtn": "web_allow_input#8"
+      }
+    ],
+    "page_open_panel#9": [
+      {
+        "name": "open",
+        "motion_duration": 1,
+        "priority": 9,
+        "interruptable": true,
+        "var_floats": [
+          {
+            "name": "page_panel_request",
+            "type": 2,
+            "code": "add 1"
+          }
+        ]
       }
     ]
   },
