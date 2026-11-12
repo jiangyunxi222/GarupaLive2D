@@ -1,155 +1,17 @@
-# 白鹭千圣（Garupa）
+# 白鹭千圣
 
-完整复制本角色目录，在 Live2DViewerEX 中导入 `00_integrated.model.json`。
+Garupa 创意工坊版，包含 104 套衣装。
 
-## 角色菜单
+## 区域触发
 
-双击本角色文件夹中的 `ControlPanel/OpenMenu.cmd`。页面、预览和桌面菜单均随角色提供，Windows 无需另装 Python。
+头部切换表情，脸部播放语音，上身与左右手臂播放动作，腰部换装，下身打开菜单。
 
-- 腿部菜单使用半透明圆角浮层，以角色身体中线居中。字体使用随角色提供的圆体。
-- 「打开面板」进入完整页面，动作、表情、衣装、语音和❤收藏通过平面标签切换。
-- 动作、语音和换装循环均可选择全部或❤收藏，设置随机或按列表顺序及各自间隔。
-- 动作与语音间隔从播放完成后计算。换装间隔为最短停留时间，换装会等待当前动作和语音结束，再恢复循环。
-- 「恢复待机」停止全部循环、动作和语音，清除表情、字幕及保持状态，保留当前衣装。
-- 字幕开关与「互动仅❤」独立设置，衣装与语音收藏在角色内共享，动作与表情收藏按衣装保存。
-- 桌面浮层和循环由角色面板后台统一执行。关闭浏览器后，后台程序继续运行。
-- 启动 Live2DViewerEX 后，点击页面「连接桌面」。桌面换装会同步页面，连接中断后自动尝试恢复。
+## 菜单
 
-更新后请完整重载 `00_integrated` 主入口。角色文件夹整体移动时，需一同保留 `ControlPanel` 与 `assets`。
+循环动作、循环语音和循环换装可同时开启。动作结束后等待 12 秒，语音结束后等待 2.5 秒，换装间隔 15 秒。换装等待当前动作和语音结束。
 
-## 衣装入口
+恢复待机停止循环、动作和语音，清除表情，保留当前衣装。
 
-| 衣装 | 内部配置 |
-|---|---|
-| 默认·舞台 | `001_costume.model.json` |
-| 常服·咖啡厅 | `002_costume.model.json` |
-| 常服 | `003_costume.model.json` |
-| 常服·2023 | `004_costume.model.json` |
-| 常服·2023·荧光棒 | `005_costume.model.json` |
-| 常服·夏 | `006_costume.model.json` |
-| 常服·夏2023 | `007_costume.model.json` |
-| 常服·冬 | `008_costume.model.json` |
-| 常服·冬2023 | `009_costume.model.json` |
-| 常服·练习服 | `010_costume.model.json` |
-| 校服·夏季 | `011_costume.model.json` |
-| 校服·冬季 | `012_costume.model.json` |
-| 演出服·红心女王（R） | `013_costume.model.json` |
-| 演出服·纯白的居所（SR） | `014_costume.model.json` |
-| 演出服·推心置腹的伙伴（SSR） | `015_costume.model.json` |
-| 演出服·朱丽叶之名（SR） | `016_costume.model.json` |
-| 演出服·认真・恐慌（SR） | `017_costume.model.json` |
-| 演出服·留宿会（SSR） | `018_costume.model.json` |
-| 演出服·偶像的规则（R） | `019_costume.model.json` |
-| 演出服·延续梦想之路（SSR） | `020_costume.model.json` |
-| 演出服·向阳处的片刻时光（SSR） | `021_costume.model.json` |
-| 演出服·偶像·女巫（SR） | `022_costume.model.json` |
-| 演出服·美好的同款（SR） | `023_costume.model.json` |
-| 演出服·模范偶像（SR） | `024_costume.model.json` |
-| 演出服·光芒四溢（SSR） | `025_costume.model.json` |
-| 演出服·容量超载（SSR） | `026_costume.model.json` |
-| 演出服·心旷神怡（SSR） | `027_costume.model.json` |
-| 演出服·若是眺望远方（SR） | `028_costume.model.json` |
-| 演出服·铭记这个特别瞬间（SR） | `029_costume.model.json` |
-| 演出服·因为有小薰在（SSR） | `030_costume.model.json` |
-| 演出服·要注意混合方法！（SR） | `031_costume.model.json` |
-| 演出服·能够走多远？（R） | `032_costume.model.json` |
-| 演出服·Country Flower（R） | `033_costume.model.json` |
-| 演出服·期待高涨的安可（SR） | `034_costume.model.json` |
-| 演出服·互相支援的存在（SSR） | `035_costume.model.json` |
-| 演出服·绽放在水面的花朵（SR） | `036_costume.model.json` |
-| 演出服·迈向舞台灯光（SSR） | `037_costume.model.json` |
-| 演出服·无法抑制的感情（SR） | `038_costume.model.json` |
-| 演出服·无声的支持（R） | `039_costume.model.json` |
-| 演出服·与飘舞的樱花花瓣一起（SSR） | `040_costume.model.json` |
-| 演出服·职业意识僵尸（SSR） | `041_costume.model.json` |
-| 演出服·跑腿女服务生（R） | `042_costume.model.json` |
-| 演出服·保持坦率的你（SSR） | `043_costume.model.json` |
-| 演出服·庆祝新的一年（SSR） | `044_costume.model.json` |
-| 演出服·传播的热意（R） | `045_costume.model.json` |
-| 演出服·耀眼夺目的历史（SSR） | `046_costume.model.json` |
-| 演出服·狗狗要通过（SR） | `047_costume.model.json` |
-| 演出服·眸中倒映之花（SSR） | `048_costume.model.json` |
-| 演出服·艳羡与微笑（SR） | `049_costume.model.json` |
-| 演出服·致王子殿下（SSR） | `050_costume.model.json` |
-| 演出服·先一步到来的春天 | `051_costume.model.json` |
-| 演出服·毕业（SSR） | `052_costume.model.json` |
-| 演出服·一起迈出一步（UR） | `053_costume.model.json` |
-| 演出服·新的校园（SSR） | `054_costume.model.json` |
-| 演出服·为了见到开心的表情（SR） | `055_costume.model.json` |
-| 演出服·正因为想要守护（UR） | `056_costume.model.json` |
-| 演出服·深厚信赖（R） | `057_costume.model.json` |
-| 演出服·你给我的勇气（UR） | `058_costume.model.json` |
-| 演出服·只给一条建议（SSR） | `059_costume.model.json` |
-| 演出服·光舞的旋律（UR） | `060_costume.model.json` |
-| 演出服·勾起拍摄冲动的侧脸（SR） | `061_costume.model.json` |
-| 演出服·看一眼就懂啦！（UR） | `062_costume.model.json` |
-| 演出服·LOVELY CAT（R） | `063_costume.model.json` |
-| 演出服·我的心意（UR） | `064_costume.model.json` |
-| 演出服·遗落之物（UR） | `065_costume.model.json` |
-| 演出服·悬崖边的告白（SR） | `066_costume.model.json` |
-| 演出服·欢喜之环（UR） | `067_costume.model.json` |
-| 演出服·For One Night Only（UR） | `068_costume.model.json` |
-| 演出服·前往辉煌的舞台 | `069_costume.model.json` |
-| 演出服·照亮梦想 | `070_costume.model.json` |
-| 演出服·盛放的声援 | `071_costume.model.json` |
-| 演出服·梦色婚礼 | `072_costume.model.json` |
-| 演出服·牡丹褶边 | `073_costume.model.json` |
-| 演出服·目标的距离 | `074_costume.model.json` |
-| 演出服·舞台服 | `075_costume.model.json` |
-| 活动·梦想祭·东奔西走 | `076_costume.model.json` |
-| 活动·梦想祭·不甘之情融于蒸汽 | `077_costume.model.json` |
-| 活动·梦想祭·偶尔放缓步调（UR） | `078_costume.model.json` |
-| 活动·梦想祭·My dear dog（UR） | `079_costume.model.json` |
-| 活动·闪耀祭·与那天一样的风和你 | `080_costume.model.json` |
-| 活动·5周年特别服 | `081_costume.model.json` |
-| 剧情·活动55剧情01 | `082_costume.model.json` |
-| 剧情·活动86剧情01 | `083_costume.model.json` |
-| 剧情·活动86剧情02 | `084_costume.model.json` |
-| 剧情·活动86剧情03 | `085_costume.model.json` |
-| 剧情·活动104剧情01 | `086_costume.model.json` |
-| 剧情·活动154剧情01 | `087_costume.model.json` |
-| 剧情·活动154剧情02 | `088_costume.model.json` |
-| 剧情·活动195剧情01 | `089_costume.model.json` |
-| 剧情·活动216剧情01 | `090_costume.model.json` |
-| 剧情·活动278剧情01 | `091_costume.model.json` |
-| 剧情·活动344剧情01 | `092_costume.model.json` |
-| 剧情·朱丽叶 | `093_costume.model.json` |
-| 剧情·剧情01 | `094_costume.model.json` |
-| 剧情·剧情01（2023） | `095_costume.model.json` |
-| 季节·2018狗年 | `096_costume.model.json` |
-| 季节·2019振袖 | `097_costume.model.json` |
-| 季节·夏日水手服 | `098_costume.model.json` |
-| 生日·2021 | `099_costume.model.json` |
-| 生日·2022 | `100_costume.model.json` |
-| 联动·更加注视我吧（UR） | `101_costume.model.json` |
-| 联动·湊阿库娅（hololive） | `102_costume.model.json` |
-| 其他·机关小丑 | `103_costume.model.json` |
-| 其他·Garupa T恤 | `104_costume.model.json` |
+## 资源来源
 
-固定父模型管理位置、缩放和换装；重复选择当前衣装不会重载。
-
-配置与资源引用已校验；完整鼠标点击实测尚未完成。素材权利归原权利人。
-
-## 统一点击规则
-
-| 实际点击位置 | 效果 |
-|---|---|
-| 头顶、刘海上部 | 切换表情 |
-| 脸部下半部 | 随机语音，按开关显示字幕 |
-| 上身中央 | 播放普通动作 |
-| 画面右侧手臂 | 角色左臂动作 |
-| 画面左侧手臂 | 角色右臂动作 |
-| 腰部、衣服中段 | 直接随机换装 |
-| 腿部、衣服下段 | 打开主菜单 |
-
-每套衣装均包含七个独立矩形点击区，按该衣装默认站姿的头部和身体比例定位，跟随模型整体移动和缩放。点击层保持透明，衣服网格合并或隐藏不会取消入口。动作造成的局部身体变形不会改变矩形分区。
-
-仅头像形态也保留相同布局，上身、腰部、腿部入口位于头像下方的透明区域，左右手入口位于对应两侧。
-
-表情、语音和身体动作不会展开菜单。缺少方向动作时播放普通动作，缺少素材时保持待机。点击分区之间的空白可打开主菜单。
-
-请完整重载 `00_integrated` 主入口，保留 `assets/hitareas` 中的点击层文件。
-
-页面提供「语音字幕」开关，默认开启，同一角色换装后保留。点击语音区只播放随机语音及可选字幕。腰部点击随机切换其他衣装，全部衣装可在页面中选择。
-
-语音字幕默认开启，同一角色换装后保留设置。原始资源没有语音文件时，点击语音区显示「当前角色未提供语音素材」，此提示不受字幕开关影响。
+模型、贴图、动作和原始音频的权利归原权利人。具体来源见 `source-lock.json`。[Garupa](https://bestdori.com/)

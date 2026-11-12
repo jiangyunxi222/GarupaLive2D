@@ -1,101 +1,21 @@
-# GarupaLive2D
+# Garupa Live2D 创意工坊版
 
-整理后的 Live2DViewerEX 资源：47 个角色，3438 套衣装。
+分支为 `workshop/live2dviewerex`。角色目录包含模型、衣装、动作、表情、语音和区域触发配置。
 
-完整复制角色目录并导入 `00_integrated` 主入口。
+## 交互
 
-## 角色菜单
+点击头部切换表情，脸部播放语音，上身与左右手臂播放动作，腰部换装，下身打开菜单。
 
-在角色目录中运行 `ControlPanel/OpenMenu.cmd`。腿部菜单使用随附圆体与半透明圆角浮层，「打开面板」进入完整网页。
+菜单包含循环动作、循环语音、循环换装、恢复待机和关闭菜单。三个循环可同时运行，换装等待当前动作和语音结束。恢复待机保留当前衣装。
 
-- 页面提供动作、表情、衣装、语音和收藏。
-- 动作、语音和换装可分别设置循环顺序、收藏范围与间隔。换装会等待当前动作和语音结束。
-- 语音区的音符加号用于上传音频和字幕，垃圾桶同时删除两者。
-- 「恢复待机」停止循环、动作和语音，清除表情与保持状态，保留当前衣装。
+## 打包资料
 
-更新配置后完整重载 `00_integrated` 主入口。移动角色时保留同目录的 `ControlPanel` 与 `assets`。
+`workshop/characters/` 保存每位角色的资料卡、EX Studio 元数据、封面和资源索引。模型入口与资源来源记录在资料卡中。
 
-## 角色索引
+在仓库根目录运行 `python workshop/validate.py` 检查资料与文件引用。
 
-| 团体 | 角色 | 衣装数 | 整合入口 |
-|---|---|---:|---|
-| Afterglow | 上原绯玛丽 | 109 | [导入入口](<Afterglow/上原绯玛丽/00_integrated.model.json>) |
-| Afterglow | 宇田川巴 | 113 | [导入入口](<Afterglow/宇田川巴/00_integrated.model.json>) |
-| Afterglow | 美竹兰 | 111 | [导入入口](<Afterglow/美竹兰/00_integrated.model.json>) |
-| Afterglow | 羽泽鸫 | 108 | [导入入口](<Afterglow/羽泽鸫/00_integrated.model.json>) |
-| Afterglow | 青叶摩卡 | 104 | [导入入口](<Afterglow/青叶摩卡/00_integrated.model.json>) |
-| Ave Mujica（Garupa） | 三角初华 | 6 | [导入入口](<Ave Mujica（Garupa）/三角初华（Garupa）/00_integrated.model.json>) |
-| Ave Mujica（Garupa） | 丰川祥子 | 5 | [导入入口](<Ave Mujica（Garupa）/丰川祥子（Garupa）/00_integrated.model.json>) |
-| Ave Mujica（Garupa） | 八幡海铃 | 4 | [导入入口](<Ave Mujica（Garupa）/八幡海铃（Garupa）/00_integrated.model.json>) |
-| Ave Mujica（Garupa） | 祐天寺若麦 | 2 | [导入入口](<Ave Mujica（Garupa）/祐天寺若麦（Garupa）/00_integrated.model.json>) |
-| Ave Mujica（Garupa） | 若叶睦 | 4 | [导入入口](<Ave Mujica（Garupa）/若叶睦（Garupa）/00_integrated.model.json>) |
-| Hello, Happy World! | 北泽育美 | 106 | [导入入口](<Hello, Happy World!/北泽育美/00_integrated.model.json>) |
-| Hello, Happy World! | 奥泽美咲 | 120 | [导入入口](<Hello, Happy World!/奥泽美咲/00_integrated.model.json>) |
-| Hello, Happy World! | 弦卷心 | 115 | [导入入口](<Hello, Happy World!/弦卷心/00_integrated.model.json>) |
-| Hello, Happy World! | 松原花音 | 105 | [导入入口](<Hello, Happy World!/松原花音/00_integrated.model.json>) |
-| Hello, Happy World! | 濑田薰 | 112 | [导入入口](<Hello, Happy World!/濑田薰/00_integrated.model.json>) |
-| Morfonica | 二叶筑紫 | 63 | [导入入口](<Morfonica/二叶筑紫/00_integrated.model.json>) |
-| Morfonica | 仓田真白 | 73 | [导入入口](<Morfonica/仓田真白/00_integrated.model.json>) |
-| Morfonica | 八潮瑠唯 | 60 | [导入入口](<Morfonica/八潮瑠唯/00_integrated.model.json>) |
-| Morfonica | 广町七深 | 64 | [导入入口](<Morfonica/广町七深/00_integrated.model.json>) |
-| Morfonica | 桐谷透子 | 65 | [导入入口](<Morfonica/桐谷透子/00_integrated.model.json>) |
-| MyGO!!!!!（Garupa） | 千早爱音 | 17 | [导入入口](<MyGO!!!!!（Garupa）/千早爱音（Garupa）/00_integrated.model.json>) |
-| MyGO!!!!!（Garupa） | 椎名立希 | 18 | [导入入口](<MyGO!!!!!（Garupa）/椎名立希（Garupa）/00_integrated.model.json>) |
-| MyGO!!!!!（Garupa） | 要乐奈 | 16 | [导入入口](<MyGO!!!!!（Garupa）/要乐奈（Garupa）/00_integrated.model.json>) |
-| MyGO!!!!!（Garupa） | 长崎爽世 | 15 | [导入入口](<MyGO!!!!!（Garupa）/长崎素世（Garupa）/00_integrated.model.json>) |
-| MyGO!!!!!（Garupa） | 高松灯 | 18 | [导入入口](<MyGO!!!!!（Garupa）/高松灯（Garupa）/00_integrated.model.json>) |
-| Pastel＊Palettes | 丸山彩 | 120 | [导入入口](<Pastel＊Palettes/丸山彩/00_integrated.model.json>) |
-| Pastel＊Palettes | 冰川日菜 | 112 | [导入入口](<Pastel＊Palettes/冰川日菜/00_integrated.model.json>) |
-| Pastel＊Palettes | 大和麻弥 | 103 | [导入入口](<Pastel＊Palettes/大和麻弥/00_integrated.model.json>) |
-| Pastel＊Palettes | 白鹭千圣 | 104 | [导入入口](<Pastel＊Palettes/白鹭千圣/00_integrated.model.json>) |
-| Pastel＊Palettes | 若宫伊芙 | 110 | [导入入口](<Pastel＊Palettes/若宫伊芙/00_integrated.model.json>) |
-| Poppin'Party | 山吹沙绫 | 102 | [导入入口](<Poppin'Party/山吹沙绫/00_integrated.model.json>) |
-| Poppin'Party | 市谷有咲 | 114 | [导入入口](<Poppin'Party/市谷有咲/00_integrated.model.json>) |
-| Poppin'Party | 户山香澄 | 121 | [导入入口](<Poppin'Party/户山香澄/00_integrated.model.json>) |
-| Poppin'Party | 牛込里美 | 101 | [导入入口](<Poppin'Party/牛込里美/00_integrated.model.json>) |
-| Poppin'Party | 花园多惠 | 104 | [导入入口](<Poppin'Party/花园多惠/00_integrated.model.json>) |
-| RAISE A SUILEN | 佐藤益木（MASKING） | 53 | [导入入口](<RAISE A SUILEN/佐藤益木（MASKING）/00_integrated.model.json>) |
-| RAISE A SUILEN | 和奏瑞依（LAYER） | 54 | [导入入口](<RAISE A SUILEN/和奏瑞依（LAYER）/00_integrated.model.json>) |
-| RAISE A SUILEN | 朝日六花（LOCK） | 63 | [导入入口](<RAISE A SUILEN/朝日六花（LOCK）/00_integrated.model.json>) |
-| RAISE A SUILEN | 珠手知由（CHU²） | 52 | [导入入口](<RAISE A SUILEN/珠手知由（CHU²）/00_integrated.model.json>) |
-| RAISE A SUILEN | 鳰原令王那（PAREO） | 50 | [导入入口](<RAISE A SUILEN/鳰原令王那（PAREO）/00_integrated.model.json>) |
-| Roselia | 今井莉莎 | 108 | [导入入口](<Roselia/今井莉莎/00_integrated.model.json>) |
-| Roselia | 冰川纱夜 | 105 | [导入入口](<Roselia/冰川纱夜/00_integrated.model.json>) |
-| Roselia | 凑友希那 | 105 | [导入入口](<Roselia/凑友希那/00_integrated.model.json>) |
-| Roselia | 宇田川亚子 | 108 | [导入入口](<Roselia/宇田川亚子/00_integrated.model.json>) |
-| Roselia | 白金燐子 | 103 | [导入入口](<Roselia/白金燐子/00_integrated.model.json>) |
-| 其他角色 | 户山明日香 | 12 | [导入入口](<其他角色/户山明日香/00_integrated.model.json>) |
-| 其他角色 | 纯田真奈 | 1 | [导入入口](<其他角色/纯田真奈（Garupa）/00_integrated.model.json>) |
+使用 EX Studio 加载资料卡指定的模型与元数据，并选择对应封面。导出的 WPK 放入 `workshop/build/`。WPK 导入实测与手动发布由条目维护者完成，状态记录在资料卡中。
 
-模型 ID 独立，换装由固定父模型管理。仅提交处理后的模型配置、运行资源、清单和必要说明，不包含原始 LPK、备份及处理工具。
+## 资源来源
 
-配置与资源引用已校验；样本做过官方接口冒烟检查，完整鼠标点击实测尚未完成。素材权利归原权利人。
-
-## 统一点击规则
-
-| 实际点击位置 | 效果 |
-|---|---|
-| 头顶、刘海上部 | 切换表情 |
-| 脸部下半部 | 随机语音，按开关显示字幕 |
-| 上身中央 | 播放普通动作 |
-| 画面右侧手臂 | 角色左臂动作 |
-| 画面左侧手臂 | 角色右臂动作 |
-| 腰部、衣服中段 | 直接随机换装 |
-| 腿部、衣服下段 | 打开主菜单 |
-
-每套衣装均包含七个独立矩形点击区，按该衣装默认站姿的头部和身体比例定位，跟随模型整体移动和缩放。点击层保持透明，衣服网格合并或隐藏不会取消入口。动作造成的局部身体变形不会改变矩形分区。
-
-仅头像形态也保留相同布局，上身、腰部、腿部入口位于头像下方的透明区域，左右手入口位于对应两侧。
-
-表情、语音和身体动作不会展开菜单。缺少方向动作时播放普通动作，缺少素材时保持待机。点击分区之间的空白可打开主菜单。
-
-请完整重载 `00_integrated` 主入口，保留 `assets/hitareas` 中的点击层文件。
-
-语音菜单可切换字幕显示，默认开启，并在同一角色换装后保留。
-
-语音字幕默认开启，同一角色换装后保留设置。当前项目未收录语音的角色仍显示素材提示；此提示不代表 Bestdori 全站不存在该角色语音。
-
-
-Bestdori 语音补配：按剧情说话角色编号及中文版台词补入 11 名角色的 2292 条独立音频，共 86702904 字节。跨章节重复引用已合并。MyGO 与 Ave Mujica 来自 MyGO 第 1 章 41 话；明日香来自主线剧情。语音列表按章节组织，音频在同一角色所有衣装间共用，每条来源见各角色 assets/voices/voice-sources.json。多人合声与缺少音频的台词未混入个人语音。纯田真奈尚未在本次核对的剧情范围内找到独立语音，保留未收录提示。
-
-35 名角色原有的 760 条语音已按 Bestdori 剧情角色编号、台词和原始音频重新整理。各角色 assets/voices/voice-sources.json 记录实际说话者、台词、音频来源及校验值。
+模型、贴图、动作和原始音频的权利归原权利人。各角色的 `source-lock.json` 记录对应来源。[Garupa](https://bestdori.com/)
