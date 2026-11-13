@@ -603,432 +603,6 @@
         "fade_in_loop": 0
       }
     ],
-    "ui_main#4": [
-      {
-        "name": "state_000",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "循环动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "循环语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "循环换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      },
-      {
-        "name": "state_001",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "循环动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "循环语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "停止换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      },
-      {
-        "name": "state_010",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "循环动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "停止语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "循环换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      },
-      {
-        "name": "state_011",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "循环动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "停止语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "停止换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      },
-      {
-        "name": "state_100",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "停止动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "循环语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "循环换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      },
-      {
-        "name": "state_101",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "停止动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "循环语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "停止换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      },
-      {
-        "name": "state_110",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "停止动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "停止语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "循环换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 0"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      },
-      {
-        "name": "state_111",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 60000,
-        "text": "<size=0></size>",
-        "text_duration": 60000,
-        "choices": [
-          {
-            "text": "停止动作",
-            "next_mtn": "web_cycle_action#6"
-          },
-          {
-            "text": "停止语音",
-            "next_mtn": "web_cycle_voice#6"
-          },
-          {
-            "text": "停止换装",
-            "next_mtn": "web_cycle_costume#6"
-          },
-          {
-            "text": "恢复待机",
-            "next_mtn": "ws_reset#6"
-          },
-          {
-            "text": "关闭菜单",
-            "next_mtn": "ui_close#4"
-          }
-        ],
-        "var_floats": [
-          {
-            "name": "page_loop_action",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_voice",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "page_loop_costume",
-            "type": 1,
-            "code": "equal 1"
-          },
-          {
-            "name": "ws_menu_open",
-            "type": 2,
-            "code": "assign 1"
-          }
-        ],
-        "command": "start_mtn ws_menu_timeout#5"
-      }
-    ],
     "ui_tap_body#6": [
       {
         "name": "all",
@@ -1086,7 +660,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 5; stop_mtn 4; hide_text; stop_mtn 7; stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_hagumi ws_manual_voice_started_42#9",
+        "command": "start_mtn garupa_l2d_carrier_hagumi ws_close_menu#6; stop_mtn 5; stop_mtn 4; hide_text; stop_mtn 7; stop_mtn 2; stop_all_sounds; start_mtn garupa_l2d_carrier_hagumi ws_manual_voice_started_42#9",
         "next_mtn": "ws_voice_1_0#2",
         "var_floats": [
           {
@@ -1148,7 +722,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 5; stop_mtn 8; stop_mtn 4; hide_text; stop_mtn 7; stop_mtn 0; stop_mtn 1; animations unlock; parameters unlock; stop_mtn 2; stop_mtn 3; stop_all_sounds; clear_exp; parts unlock; lip_sync enable; start_mtn idle",
+        "command": "start_mtn garupa_l2d_carrier_hagumi ws_close_menu#6; stop_mtn 5; stop_mtn 8; stop_mtn 4; hide_text; stop_mtn 7; stop_mtn 0; stop_mtn 1; animations unlock; parameters unlock; stop_mtn 2; stop_mtn 3; stop_all_sounds; clear_exp; parts unlock; lip_sync enable; start_mtn idle",
         "var_floats": [
           {
             "name": "page_loop_action",
@@ -1305,384 +879,384 @@
         "file": "assets/motions/143931cdb95970f79f9f71221d986cc5.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_1",
         "file": "assets/motions/2b64bcb5e74998254f9d21ac904524c0.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_2",
         "file": "assets/motions/a0354eadad72bed4747a2b2a0db856b9.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_3",
         "file": "assets/motions/980fa0ae7b775707d91dc8cab181911b.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 0,
         "fade_out": 1000,
         "fade_in_loop": 0,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_4",
         "file": "assets/motions/2e6e99b2c3a66c63ba655540aef259f8.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_5",
         "file": "assets/motions/f4e2475b3f50730644109c95abf28a06.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_6",
         "file": "assets/motions/332c279c72d579c9bf99436fe608eff2.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_7",
         "file": "assets/motions/7ed022e44e3b940435b48e4cb45b7ad7.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_8",
         "file": "assets/motions/4b0d95e70806704ba6ad0f9df13e076a.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_9",
         "file": "assets/motions/af10c6226ce731a2e83c5ea4b7fa9b64.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_10",
         "file": "assets/motions/ecf68fd99a34067c94964885da700076.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_11",
         "file": "assets/motions/d9cee7d1e088ca0046ff0ebdd7e05d9d.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_12",
         "file": "assets/motions/05566b42360366105c775e9bd9a2f26f.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_13",
         "file": "assets/motions/332c279c72d579c9bf99436fe608eff2.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_14",
         "file": "assets/motions/82ac7bb240969baf80e89646f34d7121.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_15",
         "file": "assets/motions/1291455364890402e3b128c644bfa247.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_16",
         "file": "assets/motions/9681376a96136ae081676f6a808565b5.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_17",
         "file": "assets/motions/fc0dbd74d031f0ac671e6f38ca55dd1b.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_18",
         "file": "assets/motions/65f857e44593bde3711d38b9d615c064.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_19",
         "file": "assets/motions/7f7ce19fb0a7d4f1dd4ad83a911894fb.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_20",
         "file": "assets/motions/71fae5b644f73a7b484b60ab0f7d5469.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_21",
         "file": "assets/motions/798390735dd749a856fc0ba6bc5258f1.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_22",
         "file": "assets/motions/3475a64396d5f870345cc52dad2cacb7.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_23",
         "file": "assets/motions/340fefad4d8712d51d1dff19e8fc4333.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_24",
         "file": "assets/motions/7485c5ef4b052c9a9fe3194ad57cc134.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_25",
         "file": "assets/motions/045bee917481c0964ec1a25c9aa85802.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_26",
         "file": "assets/motions/4ebf622ce13eaa511b2d15018eacb0ee.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_27",
         "file": "assets/motions/5ad8bca81bd7d01660416deb1a516341.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_28",
         "file": "assets/motions/3d35c8684bcbcee562f74164989eaf19.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_29",
         "file": "assets/motions/469292d5d476f078713a7bb565b8e52d.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_30",
         "file": "assets/motions/3d0d571720c2542e67752d49023a3f26.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       },
       {
         "name": "action_31",
         "file": "assets/motions/e39625c836ef9c830ad1ec315bca0a5a.mtn",
         "priority": 3,
         "interruptable": true,
-        "next_mtn": "idle",
         "fade_in": 700,
         "fade_out": 1000,
         "fade_in_loop": 700,
         "file_loop": false,
-        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8"
+        "post_command": "start_mtn garupa_l2d_carrier_hagumi ws_action_finished_42#9; start_mtn ws_action_gap#8",
+        "wrap_mode": 0
       }
     ],
     "ws_action_gap#8": [
@@ -2370,7 +1944,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 5; stop_mtn 4; hide_text",
+        "command": "start_mtn garupa_l2d_carrier_hagumi ws_close_menu#6; stop_mtn 5; stop_mtn 4; hide_text",
         "var_floats": [
           {
             "name": "ws_menu_open",
@@ -2404,7 +1978,7 @@
         "priority": 9,
         "interruptable": true,
         "motion_duration": 1,
-        "command": "stop_mtn 5; stop_mtn 4; hide_text",
+        "command": "start_mtn garupa_l2d_carrier_hagumi ws_close_menu#6; stop_mtn 5; stop_mtn 4; hide_text",
         "var_floats": [
           {
             "name": "ws_menu_open",
@@ -2412,6 +1986,216 @@
             "code": "assign 0"
           }
         ]
+      }
+    ],
+    "ws_refresh_menu#9": [
+      {
+        "name": "000",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_000#9"
+      },
+      {
+        "name": "001",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_001#9"
+      },
+      {
+        "name": "010",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_010#9"
+      },
+      {
+        "name": "011",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_011#9"
+      },
+      {
+        "name": "100",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_100#9"
+      },
+      {
+        "name": "101",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_101#9"
+      },
+      {
+        "name": "110",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 0"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_110#9"
+      },
+      {
+        "name": "111",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "page_loop_action",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_costume",
+            "type": 1,
+            "code": "equal 1"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_hagumi_costume_042_menu state_111#9"
+      }
+    ],
+    "ws_menu_mark_open#6": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "ws_menu_open",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ],
+        "command": "hide_text; start_mtn ws_menu_timeout#5"
       }
     ]
   },
