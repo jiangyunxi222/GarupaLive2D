@@ -15,3 +15,6 @@ Garupa 创意工坊版，包含 64 套衣装。
 ## 资源来源
 
 模型、贴图、动作和原始音频的权利归原权利人。具体来源见 `source-lock.json`。[Garupa](https://bestdori.com/)
+
+QQ群：1084876401
+制作者：缘词
