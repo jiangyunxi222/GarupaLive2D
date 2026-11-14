@@ -1231,6 +1231,61 @@
     ],
     "ws_voice_gate#8": [
       {
+        "name": "start_1",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "next_mtn": "ws_tick#8",
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "ws_voice_ready",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "ws_voice_busy",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "ws_costume_due",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "ws_switching",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "costume_loading",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "ws_voice_ready",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "ws_voice_busy",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ],
+        "command": "start_mtn garupa_l2d_carrier_mana_costume_001 ws_voice_run#6"
+      },
+      {
         "name": "skip_page_loop_voice",
         "priority": 9,
         "interruptable": true,
@@ -1313,20 +1368,6 @@
             "code": "equal 1"
           }
         ]
-      },
-      {
-        "name": "unavailable_1",
-        "priority": 9,
-        "interruptable": true,
-        "motion_duration": 1,
-        "var_floats": [
-          {
-            "name": "selected_costume",
-            "type": 1,
-            "code": "equal 1"
-          }
-        ],
-        "next_mtn": "ws_tick#8"
       }
     ],
     "ws_costume_wait#7": [
@@ -1502,6 +1543,106 @@
         "interruptable": true,
         "motion_duration": 1,
         "command": "hide_text"
+      }
+    ],
+    "ws_voice_finished_1#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "ws_voice_busy",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "ws_voice_ready_1#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "ws_voice_busy",
+            "type": 1,
+            "code": "equal 0"
+          },
+          {
+            "name": "ws_voice_ready",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
+      }
+    ],
+    "ws_manual_voice_started_1#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "page_loop_voice",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "ws_voice_busy",
+            "type": 2,
+            "code": "assign 1"
+          },
+          {
+            "name": "ws_voice_ready",
+            "type": 2,
+            "code": "assign 0"
+          }
+        ]
+      }
+    ],
+    "ws_manual_voice_finished_1#9": [
+      {
+        "name": "run",
+        "priority": 9,
+        "interruptable": true,
+        "motion_duration": 1,
+        "var_floats": [
+          {
+            "name": "selected_costume",
+            "type": 1,
+            "code": "equal 1"
+          },
+          {
+            "name": "ws_voice_busy",
+            "type": 2,
+            "code": "assign 0"
+          },
+          {
+            "name": "ws_voice_ready",
+            "type": 2,
+            "code": "assign 1"
+          }
+        ]
       }
     ]
   },
